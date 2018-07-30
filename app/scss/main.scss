@@ -1,14 +1,14 @@
+
 //layout
-@import "_misk/font-awesome";
-@import "_misk/normalize";
-@import "_misk/setting";
-@import "_misk/fonts";
+@import "blocks/normalize";
+@import "blocks/setting";
+@import "blocks/fonts";
 
 //style
-@import "sections/header";
-@import "sections/content";
-@import "sections/first";
-@import "sections/second";
-@import "sections/sixth";
-@import "sections/eight";
-@import "sections/footer";
+@import "blocks/header";
+@import "blocks/content";
+@import "blocks/first";
+@import "blocks/second";
+@import "blocks/sixth";
+@import "blocks/eight";
+@import "blocks/footer";
