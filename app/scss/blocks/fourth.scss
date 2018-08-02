@@ -45,6 +45,7 @@
 }
 
 .accordeon__arrow{
+    transition: 0.2s;
     width: 0;
     height: 0;
     border-top: 8px solid #f8b43a;
@@ -61,7 +62,13 @@
     color: #f8b43a;
 }
 
+.accordeon__people{
+    transition: 0.5s;
+    opacity: 1;
+}
+
 .accordeon__people-height{
+    opacity: 0;
     height: 0;
     overflow: hidden;
 }

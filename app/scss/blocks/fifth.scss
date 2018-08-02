@@ -1,0 +1,53 @@
+.fifth-section{
+    background-image: url(../img/fifth-bg.jpg);
+    .content{
+        position: relative;
+        width: 100%;
+    }
+    .title{
+        position: absolute;
+        left: 100px;
+        top: 115px;
+    }
+}
+
+.accordeon-menu{
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    height: 100%;
+}
+
+.menu__list{
+    display: flex;
+    height: 100%;
+    color: #ffffff;
+    // justify-content: center;
+    // align-items: center;
+}
+
+.menu__title{
+    width: 80px;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    @include font(g-regular);
+    font-size: 40px;
+    height: 100%;
+    line-height: 80px;
+    text-indent: 40px;
+    background: rgba(#000000, 0.7);
+    z-index: 100;
+}
+
+.menu__text{
+    width: 0px;
+    overflow: hidden;
+}
+
+.menu__text-width{
+    background-color: rgba(#000000, 0.7);
+    padding: 20px;
+    width: 500px;
+    @include font(u-light);
+}
