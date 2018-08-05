@@ -8,7 +8,7 @@
 }
 
 .second-section__mainblock{
-    padding-top: 35px;
+    padding-top: rem(35px);
 }
 
 .about{
@@ -25,29 +25,29 @@
 }
 
 .about__svg{
-    width: 100px;
-    height: 100px;
+    width: rem(100px);
+    height: rem(100px);
 }
 
 .about__img{
     display: inline-block;
-    height: 85px;
+    height: rem(85px);
 }
 
 .about__title{
     text-align: center;
     @include font(l-medium);
-    font-size: 24px;
-    line-height: 28px;
+    font-size: rem(24px);
+    line-height: rem(28px);
     color: #2f3234;
-    padding-top: 30px;
+    padding-top: rem(30px);
 }
 
 .about__text{
     text-align: center;
-    font-size: 14px;
-    line-height: 24px;
+    font-size: rem(14px);
+    line-height: rem(24px);
     color: #2f3234;
     @include font(u-light);
-    padding-top: 20px;
+    padding-top: rem(20px);
 }

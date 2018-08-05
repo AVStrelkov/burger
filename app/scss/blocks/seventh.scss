@@ -1,5 +1,8 @@
 .seventh-section{
     background-image: url("../img/seventh-bg.jpg");
+    .content{
+        padding: 0 rem(20px);
+    }
 }
 
 .form{
@@ -11,22 +14,22 @@
     width: 50%;
     display: flex;
     flex-direction: column;
-    margin-left: 20px;
+    margin-left: rem(20px);
     &:first-child{
         margin-left: 0;
     }
 }
 
 .form__row{
-    margin-top: 15px;
+    margin-top: rem(15px);
     display: flex;
 }
 .form__block{
-    font-size: 14px;
+    font-size: rem(14px);
     @include font(u-light);
-    line-height: 24px;
+    line-height: rem(24px);
     flex: 1;
-    margin-left: 20px;
+    margin-left: rem(20px);
     cursor: pointer;
     &:first-child{
         margin-left: 0;
@@ -36,23 +39,23 @@
 .form__input{
     box-sizing: border-box;
     border: none;
-    padding: 5px 20px;
+    padding: rem(5px) rem(20px);
     background: #ffffff;
-    border-radius: 5px;
+    border-radius: rem(5px);
     width: 100%;
 }
 
 .form__text{
     width: 100%;
-    height: 94px;
+    height: rem(94px);
     border: none;
-    border-radius: 5px;
-    padding: 5px 20px;
+    border-radius: rem(5px);
+    padding: rem(5px) rem(20px);
     box-sizing: border-box;
 }
 
 .form__pay{
-    margin-top: 2px;
+    margin-top: rem(2px);
 }
 
 .form__radio, .form__checkbox{
@@ -62,17 +65,17 @@
 }
 
 .form__span{
-    padding-left: 3px;
+    padding-left: rem(3px);
     display: inline-block;
     vertical-align: middle;
 }
 
 .form__callback{
-    margin-top: 4px;
+    margin-top: rem(4px);
 }
 
 .btn{
-    margin-top: 5px;
+    margin-top: rem(5px);
 }
 
 .btn__order{
@@ -81,15 +84,15 @@
     color: #ffffff;
     border: none;
     background: #e45028;
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: rem(10px) rem(20px);
+    border-radius: rem(5px);
     &:hover{
         background: #c1401e;
     }
 }
 
 .btn__clear{
-    margin-left: 10px;
+    margin-left: rem(10px);
     text-decoration: none;
     color: #ffffff;
     &:hover{

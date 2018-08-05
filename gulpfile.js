@@ -12,7 +12,9 @@ var gulp          = require('gulp'),
 	notify        = require("gulp-notify"),
 	rsync         = require('gulp-rsync'),
 	wait	      = require('gulp-wait'),
-	sourcemaps    = require('gulp-sourcemaps');
+	sourcemaps    = require('gulp-sourcemaps'),
+	px2rem 		  = require('gulp-px-to-rem'),
+	pxtorem 	  = require('gulp-pxtorem');
 
 gulp.task('browser-sync', function() {
 	browsersync({

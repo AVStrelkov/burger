@@ -1,12 +1,22 @@
+html{
+	font-size: 16px;
+	@include tablets{
+		font-size: 14px;
+	}
+	@include phones{
+		font-size: 12px;
+	}
+}
+
 body, html{
 	width: 100%;
-	// max-width: 1100px;
+	// max-width: rem(1100px);
 	height: 100%;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body{
-	font-style: 16px;
+	font-style: rem(16px);
 	line-height: 1.42;
 	background-color: #2f3234;
 	-webkit-font-smoothing: antialiased; /*сглаживает шрифты*/
@@ -28,9 +38,9 @@ ul{
 
 footer{
 	background: #2f3234;
-	height: 60px;
+	height: rem(60px);
 	min-width: 100%;
-	margin-top: -60px;
+	margin-top: rem(-60px);
 	position: relative;
 	background-image: url("../img/footer-bg.png");
 }

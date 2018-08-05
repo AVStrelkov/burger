@@ -6,7 +6,6 @@
 
 .review__item{
     width: 25%;
-    min-height: 325px;
     height: 50%;
     position: relative;
     display: flex;
@@ -41,30 +40,30 @@
     position: absolute;
     opacity: 0;
     color:#ffffff;
-    padding: 45px 20px 20px 20px;
+    padding: rem(45px) rem(20px) rem(20px) rem(20px);
     background: rgba(27, 50, 52, 0.4);
 }
 
 .review__text-title{
     @include font(g-regular);
-    font-size: 14px;
-    line-height: 28px;
+    font-size: rem(14px);
+    line-height: rem(28px);
 }
 
 .review__text-about{
     @include font(u-light);
-    font-size: 14px;
-    line-height: 24px;
+    font-size: rem(14px);
+    line-height: rem(24px);
 }
 
 .review__text-btn{
     border: none;
     background: #2f3234;
     @include font(u-medium);
-    font-size: 13px;
-    line-height: 30px;
-    border-radius: 5px;
-    padding: 0 15px;
+    font-size: rem(13px);
+    line-height: rem(30px);
+    border-radius: rem(5px);
+    padding: 0 rem(15px);
     text-transform: uppercase;
     color: #ffffff;
     &:hover{

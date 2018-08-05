@@ -1,13 +1,15 @@
 .fifth-section{
     background-image: url(../img/fifth-bg.jpg);
+    height: 100%;
     .content{
         position: relative;
+        width: 100%;
         max-width: 100%;
     }
     .title{
         position: absolute;
-        left: 100px;
-        top: 115px;
+        left: rem(100px);
+        top: rem(115px);
     }
 }
 
@@ -23,20 +25,19 @@
     display: flex;
     height: 100%;
     color: #ffffff;
-    // justify-content: center;
+    justify-content: flex-end;
     // align-items: center;
 }
 
 .menu__title{
     position: relative;
-    width: 80px;
+    width: rem(80px);
     writing-mode: vertical-lr;
     transform: rotate(180deg);
     @include font(g-regular);
-    font-size: 40px;
-    height: 100%;
-    line-height: 80px;
-    text-indent: 40px;
+    font-size: rem(40px);
+    line-height: rem(80px);
+    text-indent: rem(40px);
     z-index: 1;
     cursor: pointer;
     &:before{
@@ -54,13 +55,13 @@
 }
 
 .menu__text{
-    width: 0px;
+    width: rem(0px);
     overflow: hidden;
 }
 
 .menu__text-width{
     background-color: rgba(#000000, 0.7);
-    padding: 20px;
-    width: 500px;
+    padding: rem(20px);
+    width: 45%;
     @include font(u-light);
 }
