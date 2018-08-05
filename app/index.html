@@ -21,38 +21,20 @@
                             <li class="sidebar__item">
                                 <a href="#" class="sidebar__link">О нас</a>
                             </li>
-                            <li class="sidebar__dotted">
-                                <i class="fa fa-circle" aria-hidden="true"></i>
-                            </li>
                             <li class="sidebar__item">
                                 <a href="#" class="sidebar__link">Бургеры</a>
-                            </li>
-                            <li class="sidebar__dotted">
-                                <i class="fa fa-circle" aria-hidden="true"></i>
                             </li>
                             <li class="sidebar__item">
                                 <a href="#" class="sidebar__link">Команда</a>
                             </li>
-                            <li class="sidebar__dotted">
-                                <i class="fa fa-circle" aria-hidden="true"></i>
-                            </li>
                             <li class="sidebar__item">
                                 <a href="#" class="sidebar__link">Меню</a>
-                            </li>
-                            <li class="sidebar__dotted">
-                                <i class="fa fa-circle" aria-hidden="true"></i>
                             </li>
                             <li class="sidebar__item">
                                 <a href="#" class="sidebar__link">Отзывы</a>
                             </li>
-                            <li class="sidebar__dotted">
-                                <i class="fa fa-circle" aria-hidden="true"></i>
-                            </li>
                             <li class="sidebar__item">
                                 <a href="#" class="sidebar__link">Как мы работаем</a>
-                            </li>
-                            <li class="sidebar__dotted">
-                                <i class="fa fa-circle" aria-hidden="true"></i>
                             </li>
                             <li class="sidebar__item">
                                 <a href="#" class="sidebar__link">Контакты</a>
@@ -77,7 +59,11 @@
                     </div>
                 </div>
                 <div class="dropdown">
-                <a href="#" class="dropdown__link"><img src="svg/icons/arrow-scroll.svg" alt=""></a>   
+                <a href="#" class="dropdown__link">
+                    <svg class="arrow__svg">
+                        <use xlink:href="./svg/sprite.svg#arrow"></use>
+                    </svg>
+                </a>   
                 </div>
             </div>
             <div class="menu">
@@ -102,7 +88,9 @@
                     <ul class="about">
                         <li class="about__item">
                             <div class="about__pic">
-                                <img src="svg/icons/meat.svg" alt="" class="about__img">
+                                <svg class="about__svg">
+                                    <use xlink:href="./svg/sprite.svg#meat"></use>
+                                </svg>
                             </div>
                             <div class="about__title">
                                 100% свежее мясо
@@ -113,7 +101,9 @@
                         </li>
                         <li class="about__item">
                             <div class="about__pic">
-                                <img src="svg/icons/hand.svg" alt="" class="about__img">
+                                <svg class="about__svg">
+                                    <use xlink:href="./svg/sprite.svg#hand"></use>
+                                </svg>
                             </div>
                             <div class="about__title">
                                 Ручная  сборка
@@ -124,7 +114,9 @@
                         </li>
                         <li class="about__item">
                             <div class="about__pic">
-                                <img src="svg/icons/natural.svg" alt="" class="about__img">
+                                <svg class="about__svg">
+                                    <use xlink:href="./svg/sprite.svg#natural"></use>
+                                </svg>
                             </div>
                             <div class="about__title">
                                 Натуральные ингредиенты
@@ -527,10 +519,26 @@
                     <div class="footer__right">
                         <div class="footer__social">
                             <ul class="social">
-                                <li class="social__item"><a href="#" class="social__link"><img class="social__link-svg" src="svg/icons/vk.svg" alt=""></a></li>
-                                <li class="social__item"><a href="#" class="social__link"><img class="social__link-svg" src="svg/icons/fb.svg" alt=""></a></i></li>
-                                <li class="social__item"><a href="#" class="social__link"><img class="social__link-svg" src="svg/icons/inst.svg" alt=""></a></li>
-                                <li class="social__item"><a href="#" class="social__link"><img class="social__link-svg" src="svg/icons/twitter.svg" alt=""></a></li>
+                                <li class="social__item"><a href="#" class="social__link">
+                                    <svg class="social__svg">
+                                        <use xlink:href="./svg/sprite.svg#vk"></use>
+                                    </svg>
+                                </li>
+                                <li class="social__item"><a href="#" class="social__link">
+                                    <svg class="social__svg">
+                                        <use xlink:href="./svg/sprite.svg#fb"></use>
+                                    </svg>
+                                </li>
+                                <li class="social__item"><a href="#" class="social__link">
+                                    <svg class="social__svg">
+                                        <use xlink:href="./svg/sprite.svg#inst"></use>
+                                    </svg>
+                                </li>
+                                <li class="social__item"><a href="#" class="social__link">
+                                    <svg class="social__svg">
+                                        <use xlink:href="./svg/sprite.svg#tw"></use>
+                                    </svg>
+                                </li>
                             </ul>
                         </div>
                     </div>
