@@ -2,7 +2,7 @@
     background-image: url("../img/fourth-bg.jpg");
     .content{
         position: relative;
-        width: 100%;
+        max-width: 100%;
         padding: 0;
     }   
 }
@@ -22,7 +22,8 @@
 }
 
 .accordeon{
-    width: 360px;
+    padding-left: 10%;
+    width: 100%;
     color: #ffffff;
 }
 
@@ -42,6 +43,9 @@
     @include font("g-regular");
     font-size: 14px;
     line-height: 28px;
+    &:hover{
+        color: #f8b43a;
+    }
 }
 
 .accordeon__arrow{
@@ -63,13 +67,16 @@
 }
 
 .accordeon__people{
+    height: auto;
+    max-height: 300px;
+    transition:  max-height 1s;
     transition: 0.5s;
     opacity: 1;
 }
 
 .accordeon__people-height{
     opacity: 0;
-    height: 0;
+    max-height: 0;
     overflow: hidden;
 }
 

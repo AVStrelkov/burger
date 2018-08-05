@@ -5,9 +5,6 @@
 
 .burger{
     flex: 1;
-}
-
-.burger{
     width: 100%;
     position: relative;
     display: flex;
@@ -16,11 +13,16 @@
 .burger__left, .burger__right{
     width: 50%;
     display: flex;
+    overflow: hidden;
 }
 
 .burger__left{
     align-items: center;
     justify-content: center;
+}
+
+.burger__pic{
+    max-width: 450px;
 }
 
 .burger__right{

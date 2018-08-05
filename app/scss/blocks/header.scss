@@ -13,9 +13,9 @@
 
 .sidebar{
     display: flex;
-    width: 700px;
+    margin-right: 20px;
     height: 100%;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
 }
 
@@ -23,13 +23,33 @@
     color: #ffffff;
     text-decoration: none;
     text-transform: uppercase;
+    display: inline-block;
+    vertical-align: middle;
     &:hover{
         text-decoration: underline;
     }
 }
 
 .sidebar__item{
+    display: inline-block;
+    vertical-align: middle;
     font-size: 13px;
+    &:after{
+        display: inline-block;
+        vertical-align: middle;
+        content: "";
+        width: 4px;
+        height: 4px;
+        margin: 0 8px;
+        background-color: #ffffff;
+        border-radius: 50%;
+        
+    }
+    &:last-child{
+        &:after{
+            display: none;
+        }
+    }
 }
 
 .sidebar__dotted{
