@@ -3,11 +3,20 @@
     .content{
         padding: 0 rem(20px);
     }
+    .title{
+        @include tablets{
+            text-align: center;
+        }
+    }
 }
 
 .form{
     display: flex;
     color: #ffffff;
+    @include tablets{
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .form__left, .form__right{
@@ -17,6 +26,13 @@
     margin-left: rem(20px);
     &:first-child{
         margin-left: 0;
+    }
+    @include tablets{
+        width: 80%;
+        margin-left: 0;
+    }
+    @include phones{
+        width: 100%;
     }
 }
 
@@ -76,19 +92,6 @@
 
 .btn{
     margin-top: rem(5px);
-}
-
-.btn__order{
-    cursor: pointer;
-    text-transform: uppercase;
-    color: #ffffff;
-    border: none;
-    background: #e45028;
-    padding: rem(10px) rem(20px);
-    border-radius: rem(5px);
-    &:hover{
-        background: #c1401e;
-    }
 }
 
 .btn__clear{

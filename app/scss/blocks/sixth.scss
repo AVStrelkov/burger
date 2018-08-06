@@ -10,6 +10,10 @@
     position: relative;
     display: flex;
     align-items: center;
+    @include tablets{
+        width: 50%;
+        height: 25%;
+    }
 }
 
 
@@ -20,6 +24,7 @@
     &:hover{
         .review__text{
             opacity: 1;
+           
         }
     }
 }
@@ -42,18 +47,28 @@
     color:#ffffff;
     padding: rem(45px) rem(20px) rem(20px) rem(20px);
     background: rgba(27, 50, 52, 0.4);
+    @include tablets{
+        text-align: center;
+    }
 }
 
 .review__text-title{
     @include font(g-regular);
     font-size: rem(14px);
     line-height: rem(28px);
+    @include tablets{
+        font-size: rem(24px);
+        line-height: rem(28px);
+    }
 }
 
 .review__text-about{
     @include font(u-light);
     font-size: rem(14px);
     line-height: rem(24px);
+    @include phones{
+        display: none;
+    }
 }
 
 .review__text-btn{
@@ -68,5 +83,8 @@
     color: #ffffff;
     &:hover{
         background: #252729;
+    }
+    @include phones{
+        margin-top: 5%;
     }
 }

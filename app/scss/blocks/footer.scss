@@ -6,13 +6,17 @@
 
 .footer__left, .footer__right{
     display: flex;
-    width: 50%;
     height: rem(60px);
 }
 
 .footer__left{
+    width: 65%;
     display: flex;
     align-items: center;
+}
+
+.footer__right{
+    width: 35%;
 }
 
 .phone{

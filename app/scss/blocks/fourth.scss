@@ -20,21 +20,36 @@
     .title{
         margin-top: rem(30px);
     }
+    @include tablets{
+        width: 100%;
+    }
 }
 
 .accordeon{
     padding-left: 10%;
     width: 100%;
     color: #ffffff;
+    @include tablets{
+        padding-left: 0;
+        text-align: center;
+    }
 }
 
 .accordeon__list{
     display: flex;
     flex-direction: column;
+    @include tablets{
+        align-items: center;
+    }
 }
 
 .accordeon__link{
     margin-top: rem(20px);
+    @include tablets{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .accordeon__full-name{
@@ -46,6 +61,10 @@
     line-height: rem(28px);
     &:hover{
         color: #f8b43a;
+    }
+    @include tablets{
+        font-size: rem(24px);
+        line-height: 28px;
     }
 }
 
@@ -86,6 +105,11 @@
     height: 100%;
     margin-top: rem(20px);
     margin-left: rem(25px);
+    @include tablets{
+        flex-direction: column;
+        align-items: center;
+        margin-left: 0;
+    }
 }
 
 .accordeon__photo{
@@ -96,6 +120,9 @@
 .accordeon__item{
     width: rem(215px);
     padding: 0 rem(10px);
+    @include tablets{
+        width: 95%;
+    }
 }
 
 .accordeon__photo-pic{

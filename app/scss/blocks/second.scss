@@ -1,5 +1,8 @@
 .second-section{
     background-image: url("../img/second-bg.jpg");
+    @include tablets{
+        background-image: url("../img/second-bg768.jpg");
+    }
 }
 
 .title-second{
@@ -14,10 +17,21 @@
 .about{
     display: flex;
     justify-content: space-around;
+    @include phones{
+        flex-direction: column;
+    }
 }
 
 .about__item{
     width: 30%;
+    @include phones{
+        margin-top: 5%;
+        display: flex;
+        width: 100%;
+        &:first-child{
+            margin-top: 0;
+        }
+    }
 }
 
 .about__pic{
@@ -35,19 +49,28 @@
 }
 
 .about__title{
-    text-align: center;
     @include font(l-medium);
     font-size: rem(24px);
     line-height: rem(28px);
     color: #2f3234;
     padding-top: rem(30px);
+    @include phones{
+        padding-top: 0;
+    }
 }
 
 .about__text{
-    text-align: center;
     font-size: rem(14px);
     line-height: rem(24px);
     color: #2f3234;
     @include font(u-light);
     padding-top: rem(20px);
+}
+
+.about__block{
+    text-align: center;
+    @include phones{
+        text-align: left;
+        margin-left: 5%;
+    }
 }

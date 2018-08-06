@@ -31,7 +31,7 @@
 
 .menu__title{
     position: relative;
-    width: rem(80px);
+    // width: 100%;
     writing-mode: vertical-lr;
     transform: rotate(180deg);
     @include font(g-regular);
