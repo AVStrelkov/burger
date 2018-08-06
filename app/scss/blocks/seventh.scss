@@ -80,6 +80,39 @@
     vertical-align: middle;
 }
 
+.form__radio:checked{
+    position: relative;
+    &:after{
+        transform: translate(50%, 50%);
+        right: 50%;
+        bottom: 50%;
+        position: absolute;
+        display: block;
+        content: "";
+        width: rem(6px);
+        height: rem(6px);
+        border-radius: 50%;
+        background-color: #e45028;
+    }
+}
+
+.form__checkbox:checked{
+    position: relative;
+    &:after{
+        transform: translate(50%, 50%);
+        right: 50%;
+        bottom: 50%;
+        position: absolute;
+        display: block;
+        content: "";
+        width: rem(12px);
+        height: rem(10px);
+        // border-radius: 50%;
+        // background-color: #e45028;
+        background: url("../img/checkmark.png");
+    }
+}
+
 .form__span{
     padding-left: rem(3px);
     display: inline-block;

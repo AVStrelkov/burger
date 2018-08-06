@@ -438,13 +438,13 @@
                                 <div class="form__name">
                                     Имя
                                 </div>
-                                <input class="form__input" type="text">                                                       
+                                <input class="form__input" type="text" name="name">                                                       
                             </label>
                             <label class="form__block">
                                 <div class="form__name">
                                     Телефон
                                 </div>
-                                <input class="form__input" type="text">                                                       
+                                <input class="form__input" type="text" name="phone">                                                       
                             </label>
                         </div>
                         <div class="form__row">
@@ -508,10 +508,8 @@
                             </label>
                         </div>
                         <div class="btn">
-                            <button class="order__btn">
-                                Заказать
-                            </button>
-                            <a href="#" class="btn__clear">Очистить</a>
+                            <input type="submit" value="Заказать" class="order__btn">
+                            <input type="reset" value="Очистить"  class="btn__clear">
                         </div>
                     </div>
                 </form>
