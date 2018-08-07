@@ -1,0 +1,45 @@
+.footer .content, .social{
+    flex-direction: row;
+    display: flex;
+    color: #ffffff;
+}
+
+.footer__left, .footer__right{
+    display: flex;
+    width: 50%;
+    height: 60px;
+}
+
+.footer__left{
+    display: flex;
+    align-items: center;
+}
+
+.phone{
+    color: #e45028;
+}
+
+.footer__right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 18px;
+}
+
+.social__item{
+    margin:0 10px;
+}
+
+.social__link{
+    color: #ffffff;
+    opacity: 0.5;
+    &:hover{
+        opacity: 1;
+    }
+}
+
+.social__link-svg{
+    padding-top: 10px;
+    width: 20px;
+    height: 20px;
+}

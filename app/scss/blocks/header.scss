@@ -1,3 +1,65 @@
 .header{
-    background: black;
+    height: 69px;
+    width: 100%;
+    display: flex;
+    @include font(u-medium);
+    z-index: 200;
 }
+
+.nav{
+    margin-left: auto;
+    height: 100%;
+}
+
+.sidebar{
+    display: flex;
+    width: 700px;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.sidebar__link{
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover{
+        text-decoration: underline;
+    }
+}
+
+.sidebar__item{
+    font-size: 13px;
+}
+
+.sidebar__dotted{
+    font-size: 5px;
+    color: #ffffff;
+    margin-bottom: 1px;
+}
+
+.order{
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.order__btn{
+    text-transform: uppercase;
+    font-size: 13px;
+    border: none;
+    transition: 0.3s;
+    background-color: #e45028;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    width: 97px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    &:hover{
+        background: #c1401e;
+    }
+}
+
+  

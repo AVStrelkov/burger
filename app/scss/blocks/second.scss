@@ -1,0 +1,48 @@
+.second-section{
+    background-image: url("../img/second-bg.jpg");
+}
+
+.title-second{
+    color: #2f3234;
+    text-align: center;
+}
+
+.second-section__mainblock{
+    padding-top: 35px;
+}
+
+.about{
+    display: flex;
+    justify-content: space-around;
+}
+
+.about__item{
+    width: 30%;
+}
+
+.about__pic{
+    text-align: center;
+}
+
+.about__img{
+    display: inline-block;
+    height: 85px;
+}
+
+.about__title{
+    text-align: center;
+    @include font(l-medium);
+    font-size: 24px;
+    line-height: 28px;
+    color: #2f3234;
+    padding-top: 30px;
+}
+
+.about__text{
+    text-align: center;
+    font-size: 14px;
+    line-height: 24px;
+    color: #2f3234;
+    @include font(u-light);
+    padding-top: 20px;
+}

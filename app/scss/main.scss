@@ -1,3 +1,14 @@
-@import "fonts";
 
+//layout
+@import "blocks/normalize";
+@import "blocks/setting";
+@import "blocks/fonts";
+
+//style
 @import "blocks/header";
+@import "blocks/content";
+@import "blocks/first";
+@import "blocks/second";
+@import "blocks/sixth";
+@import "blocks/eight";
+@import "blocks/footer";
