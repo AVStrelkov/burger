@@ -79,29 +79,7 @@
     &:hover{
         background: #c1401e;
     }
-}
-
-.slim-menu{
-    display: none;
     @include tablets{
-        margin-left: 15px;
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        width: 30px;
-        &:hover{
-            .slim__row{
-                background-color: #f8b43a;
-            }
-        }
-        .slim__row{
-            width: 100%;
-            margin-top: 5px;
-            border-radius: 2px;
-            height: 5px;
-            background-color: #ffffff;
-        }
-	}
+        margin-right: 60px;
+    }
 }
-
-  
