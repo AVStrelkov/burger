@@ -1,0 +1,61 @@
+.hamburgermenu{
+    display: none;
+    height: 100%;
+    background-color: #313234;
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    .logo{
+        position: fixed;
+        left: 20px;
+        top: 20px;
+    }
+
+
+    .sidebar{
+        flex-direction: column;
+        justify-content: center;
+        @include tablets{
+            display: flex;
+        }
+    }
+
+    .sidebar__item{
+        font-size: 24px;
+        line-height: 40px;
+        margin: 1% 0;
+    }
+
+    .close__pic{
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        width: 30px;
+        height: 30px;
+        display: block;
+    }
+
+    .slim__row1, .slim__row2{
+        position: absolute;
+        right: 30px;
+        top: 30px;
+        display: block;
+        width: 30px;
+        height: 6px;
+        border-radius: 3px;
+        background-color: #fff;
+        opacity: 0.7;
+    }
+
+    .slim__row1{
+        transform: rotate(45deg);
+    }
+
+    .slim__row2{
+        transform: rotate(-45deg);
+    }
+}
