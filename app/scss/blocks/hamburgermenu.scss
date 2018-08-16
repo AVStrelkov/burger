@@ -10,11 +10,6 @@
     left: 0;
     right: 0;
     // opacity: 0.9;
-    .logo{
-        position: fixed;
-        left: 20px;
-        top: 20px;
-    }
 
 
     .sidebar{
@@ -27,38 +22,28 @@
 
 
     .sidebar__item{
-        font-size: 24px;
-        line-height: 40px;
+        font-size: rem(24px);
+        line-height: rem(40px);
         margin: 1% 0;
     }
-
-    .close__pic{
-        position: absolute;
-        right: 30px;
-        top: 30px;
-        width: 30px;
-        height: 30px;
-        display: block;
-    }
-
 }
 
 
 .slim__row{
-    width: 30px;
+    width: rem(30px);
     margin-top: 4px;
     height: 6px;
-    border-radius: 3px;
+    border-radius: rem(3px);
     background-color: #fff;
     // opacity: 0.7;
 }   
 
 .slim-menu{
-    width: 40px;
-    height: 36px;
+    width: rem(40px);
+    height: rem(36px);
     position: fixed;
-    top: 23px;
-    right: 30px;
+    top: rem(23px);
+    right: rem(30px);
     z-index: 1000;
     display: none;
     flex-direction: column;
@@ -66,7 +51,7 @@
         display: flex;
         justify-content: center;
         flex-direction: column;
-        width: 30px;
+        width: rem(30px);
         &:hover{
             .slim__row{
                 background-color: #f8b43a;
@@ -74,8 +59,8 @@
         }
         .slim__row{
             width: 100%;
-            border-radius: 2px;
-            height: 5px;
+            border-radius: rem(2px);
+            height: rem(5px);
             background-color: #ffffff;
         }
 	}

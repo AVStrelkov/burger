@@ -13,16 +13,25 @@
 }
 
 .wrapper-sleder{
-    width: 100%;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s;
+    position: absolute;
+    // width: 9999px;
     overflow: hidden;
+    @include tablets{
+        height: 100%;
+    }
 }
 
 .slide{
-    width: 100%;
+    float: left;
+    max-width: rem(980px);
     display: flex;
     @include tablets{
         flex-direction: column;
         align-items: center;
+        height: 90%;
     }
 }
 
@@ -34,6 +43,7 @@
     @include tablets{
         justify-content: center;
         text-align: center;
+        height: 50%;
     }
 }
 
@@ -51,14 +61,14 @@
 .slide__right{
     flex-direction: column;
     align-items: flex-start;
+    justify-content: center;
     @include tablets{
-        margin-top: rem(20px);
         align-items: center;
         width: 80%;
     }
     .title{
         @include tablets{
-            width: 70%;
+            width: 100%;
         }
         @include phones{
             width: 100%;
@@ -153,6 +163,9 @@
 
 .slide__pic{
     max-width: 80%;
+    @include tablets{
+        max-height: 100%;
+    }
 }
 
 .slide__weight{
@@ -223,6 +236,9 @@ margin-top: rem(20px);
     align-items: flex-end;
     .order__btn{
         margin-left: rem(30px);
+        @include tablets{
+            margin-right: auto;
+        }
     }
 }
 
