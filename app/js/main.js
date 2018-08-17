@@ -40,17 +40,19 @@ function init(){
     let btnRight = document.querySelector(".slide-arrow__right");
     let slide = document.querySelectorAll(".slide");
     let computed = content.clientWidth;
-    let right = 0;
-    slide[0].style.width = computed + "px";
-    slide[1].style.width = computed + "px";
-    slide[2].style.width = computed + "px";
+    let right = computed * (slide.length - 1);
+    for ( var i = 0; i < slide.length; i++){
+        slide[i].style.width = computed + "px";
+    }
     wrapper.style.width = computed * slide.length + "px";
-    // console.dir(content.clientWidth);
+    wrapper.style.right = right * -1 + "px";
 
     
     
     btnLeft.addEventListener("click", function(e){
         e.preventDefault();
+        let content = document.querySelector(".content");
+        let computed = content.clientWidth;
         let wrapperRight = parseInt(wrapper.style.right);
         let wrapperWidth = parseInt(wrapper.style.width);
         if (wrapperRight <= -wrapperWidth + computed){
@@ -58,10 +60,13 @@ function init(){
             let right = wrapper.style.right/computed;
         } else{
             wrapper.style.right = wrapperRight - computed +"px";
+            console.log(wrapper.style.right);
         }
     });
     btnRight.addEventListener("click", function(e){
         e.preventDefault();
+        let content = document.querySelector(".content");
+        let computed = content.clientWidth;
         let wrapperRight = parseInt(wrapper.style.right);
         let wrapperWidth = parseInt(wrapper.style.width);
         if (wrapperRight >= 0){
@@ -69,6 +74,7 @@ function init(){
             let right = wrapper.style.right/computed;
         } else{
             wrapper.style.right = wrapperRight + computed +"px";
+            console.log(wrapper.style.right);
         }
     });
     
@@ -78,16 +84,64 @@ function init(){
     let content = document.querySelector(".content");
     let slide = document.querySelectorAll(".slide");
     let computed = content.clientWidth;
-    slide[0].style.width = computed + "px";
-    slide[1].style.width = computed + "px";
-    slide[2].style.width = computed + "px";
+    for ( var i = 0; i < slide.length; i++){
+        slide[i].style.width = computed + "px";
+    }
     wrapper.style.width = computed * slide.length + "px";
     let wrapperRight = parseInt(wrapper.style.right);
-    let right = wrapperRight/computed;
+    let right = Math.round(wrapperRight/computed);
     wrapper.style.right=right*computed+"px";
     // wrapper.style.right = computed * right;
     console.log(right);
-});
+    console.log(computed);
+    });
+
+    //form
+
+    const myForm = document.querySelector("#form");
+    const sendButton = document.querySelector("#sendButton");
+
+    sendButton.addEventListener("click", function(e){
+        e.preventDefault();
+        // console.log(myForm.elements.name.value);
+        // console.log(myForm.elements.pay.value);
+        if (validateForm(myForm)){
+            const data = {
+                name: myForm.elements.name.value,
+                phone: myForm.elements.phone.value
+
+            };
+
+            console.log(data);
+            const xhr = new XMLHttpRequest();
+            xhr.open("POST", "https://webdev-api.loftschool.com/sendmai");
+            xhr.send(JSON.stringify(data));
+        }
+    });
+
+    function validateForm(form){
+        let valid = true;
+
+        if (!validateField(form.elements.name)){
+            valid = false;
+        }
+
+        if (!validateField(form.elements.phone)){
+            valid = false;
+        }
+
+        if (!validateField(form.elements.pay[1])){
+            valid = false;
+        }
+
+        return valid;
+    }
+
+    function validateField(field){
+        field.nextElementSibling.textContent = field.validationMessage;
+        return field.checkValidity();
+    }
+
     
 }
 

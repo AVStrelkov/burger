@@ -40,6 +40,17 @@
 .form__row{
     margin-top: rem(15px);
     display: flex;
+    .form__block{
+        position: relative;
+        .form__error{
+            top: 0;
+            right: 0;
+        }
+    }
+}
+
+.form__error{
+    color: #e45028;
 }
 .form__block{
     font-size: rem(14px);
@@ -72,7 +83,14 @@
 }
 
 .form__pay{
+    position: relative;
     margin-top: rem(2px);
+    height: 3rem;
+}
+
+.form__error{
+    position: absolute;
+    bottom: 0;
 }
 
 .form__radio, .form__checkbox{
