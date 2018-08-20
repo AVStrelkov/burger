@@ -212,6 +212,7 @@ function init(){
                     overlay.addClass("overlay-activ");
                     body.classList.add("body-active");
                     overlay.find(".overlay__name")[0].innerHTML = "Заказ принят!";
+                    overlay.find(".overlay__text")[0].innerHTML = "";
                 }
             });
         }
