@@ -26,6 +26,9 @@
             opacity: 1;
            
         }
+        .review__text-btn{
+            pointer-events: auto;
+        }
     }
 }
 
@@ -72,6 +75,7 @@
 }
 
 .review__text-btn{
+    pointer-events: none;
     border: none;
     background: #2f3234;
     @include font(u-medium);

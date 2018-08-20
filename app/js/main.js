@@ -147,6 +147,37 @@ function init(){
     console.log(computed);
     });
 
+    //reviews
+
+    $(".review__text-btn").on("click", e =>{
+        e.preventDefault();
+        const $this = $(e.target);
+        const rewievTitle = $this.prev('.review__text-title');
+        const rewievAbout = $this.prev('.review__text-about');
+        let overlay = $(".overlay");
+        // let name = $this.siblings('review__text-title')[0].innerHTML;
+        let about = $this.siblings('review__text-about');
+        overlay.addClass("overlay-activ");
+        body.classList.add("body-active");
+        overlay.find(".overlay__name")[0].innerHTML = $this.siblings('.review__text-title')[0].innerHTML;
+        overlay.find(".overlay__text")[0].innerHTML = $this.siblings('.review__text-about')[0].innerHTML;
+        
+    });
+
+    $(".overlay").on("click", function (e){
+        e.preventDefault();
+        let name = e.target.className;
+        let overlay = $(".overlay");
+        if(name !== "overlay__block" && name !== "overlay__content" && name !=="overlay__name" && name !== "overlay__text"){
+            overlay.removeClass("overlay-activ");
+            body.classList.remove("body-active");
+        }
+        
+    });
+
+
+
+
     //form
 
     const myForm = document.querySelector("#form");
