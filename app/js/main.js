@@ -198,7 +198,7 @@ function init(){
             console.log(data);
             const xhr = new XMLHttpRequest();
             xhr.responseType = "json";
-            xhr.open("POST", "https://webdev-api.loftschool.com/sendmail/fail");
+            xhr.open("POST", "https://webdev-api.loftschool.com/sendmail/fai");
             xhr.send(JSON.stringify(data));
             xhr.addEventListener('load', () => {
                 if(xhr.status >= 400) {
