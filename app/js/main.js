@@ -198,11 +198,14 @@ function init(){
             console.log(data);
             const xhr = new XMLHttpRequest();
             xhr.responseType = "json";
-            xhr.open("POST", "https://webdev-api.loftschool.com/sendmail");
+            xhr.open("POST", "https://webdev-api.loftschool.com/sendmail/fail");
             xhr.send(JSON.stringify(data));
             xhr.addEventListener('load', () => {
                 if(xhr.status >= 400) {
-                    console.log("все плохо");
+                    let overlay = $(".overlay");
+                    overlay.addClass("overlay-activ");
+                    body.classList.add("body-active");
+                    overlay.find(".overlay__name")[0].innerHTML = "Произошла ошибка на сервере. Приносим свои извинения"
                 }
                 else{
                     let overlay = $(".overlay");
