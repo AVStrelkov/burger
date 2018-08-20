@@ -53,18 +53,22 @@
 }
 
 .accordeon__full-name{
+    z-index: 10;
     display: flex;
     align-items: center;
-    cursor: pointer;
     @include font("g-regular");
     font-size: rem(14px);
     line-height: rem(28px);
-    &:hover{
-        color: #f8b43a;
-    }
     @include tablets{
         font-size: rem(24px);
         line-height: 28px;
+    }
+}
+
+.accordeon__name{
+    cursor: pointer;
+    &:hover{
+        color: #f8b43a;
     }
 }
 
@@ -78,27 +82,29 @@
     margin-right: rem(10px);
 }
 
-.accordeon__arrow-up{
-    transform: rotate(180deg);
+.is-activTeam{
+    .accordeon__arrow{
+        transform: rotate(180deg);
+    }
+
+    .accordeon__name{
+        color: #f8b43a;
+    }
 }
 
-.accordeon__name-yellow{
-    color: #f8b43a;
-}
+
+
+
 
 .accordeon__people{
-    height: auto;
-    max-height: rem(300px);
-    transition:  max-height 1s;
-    transition: 0.5s;
-    opacity: 1;
+    overflow: hidden;
+    // height: 0;
+    display: none;
+    // transition:  max-height 1s;
+    // opacity: 1;
 }
 
-.accordeon__people-height{
-    opacity: 0;
-    max-height: 0;
-    overflow: hidden;
-}
+
 
 .accordeon__human{
     display: flex;

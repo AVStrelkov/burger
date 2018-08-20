@@ -1,10 +1,11 @@
 window.onload = init;
 
 function init(){
+
     let menu = document.querySelector(".slim-menu");
     let menuContainer = document.querySelector(".hamburgermenu");
     let body = document.querySelector("body");
-    let team = document.querySelector(".accordeon__list");
+    
 
     function toggleMenu(e){
         menuContainer.classList.toggle("is-active");
@@ -18,19 +19,69 @@ function init(){
         if(e.target.className === "sidebar__link") toggleMenu();
     });
 
-    team.addEventListener("click", teamAccordeon);
-
-    function teamAccordeon(e){
-        for(let i=0; i < team.children.length; i++){
-            let peopleHeight = team.children[i].lastElementChild;
-            peopleHeight.classList.add("accordeon__people-height");
+    //accordeonTeam
+   
+    $(".accordeon__name").on("click", e =>{
+        e.preventDefault();
+        const $this = $(e.target);
+        const link = $this.closest(".accordeon__link");
+        const people = $this.closest(".accordeon__full-name").next(".accordeon__people");
+        console.log(people);
+        
+        const peoples = $(".accordeon__people");
+        const links = $(".accordeon__link");
+        if (!link.hasClass("is-activTeam")){
+            links.removeClass("is-activTeam");
+            link.addClass("is-activTeam");
+            peoples.stop(true).slideUp();
+            people.stop(true).slideDown();
+        }else{
+            link.removeClass("is-activTeam");
+            people.stop(true).slideUp();
         }
-        let arrow = e.target.previousElementSibling;
-        let people = e.target.parentElement.nextElementSibling;
-        // console.log(people);
-        arrow.classList.toggle("accordeon__arrow-up");
-        people.classList.toggle("accordeon__people-height");
-    }
+
+
+
+    });
+
+    // accordeonMenu();
+
+    $(".menu__title").on("click", e =>{
+        e.preventDefault();
+        const $this = $(e.target);
+        const link = $this.closest(".menu__list");
+        const text = $this.next(".menu__text");
+        const links = $(".menu__list");
+        const texts = $(".menu__text");
+        if(!link.hasClass("menu__list-width")){
+            links.removeClass("menu__list-width");
+            link.addClass("menu__list-width");
+        }else{
+            link.removeClass("menu__list-width");            
+        }
+    });
+
+    // let team = document.querySelectorAll(".accordeon__full-name");
+    // team.addEventListener("click", function(e){
+    //     console.dir(e.target);        
+    // })
+   
+    // team.addEventListener("click", teamAccordeon);
+
+    // function teamAccordeon(){
+    //     console.dir(this.children.length);
+        // let arrow = e.target.previousElementSibling;
+        // let people = e.target.parentElement.nextElementSibling;
+        // console.log(arrow);
+        // for(let i=0; i < team.children.length; i++){
+        //     let peopleHeight = team.children[i].lastElementChild;
+        //     peopleHeight.classList.add("accordeon__people-height");
+        //     arrow.classList.remote("accordeon__arrow-up");
+        // }
+        // // console.log(people);
+        // arrow.classList.add("accordeon__arrow-up");
+        // people.classList.remote("accordeon__people-height");
+    // }
 
     // slider
 
@@ -77,7 +128,7 @@ function init(){
             console.log(wrapper.style.right);
         }
     });
-    
+
     
     window.addEventListener('resize', function(){
     // let wrapperRight = document.querySelector(".wrapper-sleder");
@@ -108,8 +159,9 @@ function init(){
         if (validateForm(myForm)){
             const data = {
                 name: myForm.elements.name.value,
-                phone: myForm.elements.phone.value
-
+                phone: myForm.elements.phone.value,
+                to: 'qwer@qwer.com',
+                comment: 'kjohopjhn'
             };
 
             console.log(data);
@@ -130,9 +182,9 @@ function init(){
             valid = false;
         }
 
-        if (!validateField(form.elements.pay[1])){
-            valid = false;
-        }
+        // if (!validateField(form.elements.pay[1])){
+        //     valid = false;
+        // }
 
         return valid;
     }
