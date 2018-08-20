@@ -191,14 +191,14 @@ function init(){
             const data = {
                 name: myForm.elements.name.value,
                 phone: myForm.elements.phone.value,
-                to: 'qwer@qwer.com',
-                comment: 'kjohopjhn'
+                comment: myForm.elements.textarea.value,
+                to: 'qwer@qwer.com'
             };
 
             console.log(data);
             const xhr = new XMLHttpRequest();
             xhr.responseType = "json";
-            xhr.open("POST", "https://webdev-api.loftschool.com/sendmail/fai");
+            xhr.open("POST", "https://webdev-api.loftschool.com/sendmail/fail");
             xhr.send(JSON.stringify(data));
             xhr.addEventListener('load', () => {
                 if(xhr.status >= 400) {
