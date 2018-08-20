@@ -205,12 +205,13 @@ function init(){
                     let overlay = $(".overlay");
                     overlay.addClass("overlay-activ");
                     body.classList.add("body-active");
-                    overlay.find(".overlay__name")[0].innerHTML = "Произошла ошибка на сервере. Приносим свои извинения"
+                    overlay.find(".overlay__name")[0].innerHTML = "Произошла ошибка на сервере. Приносим свои извинения";
                 }
                 else{
                     let overlay = $(".overlay");
                     overlay.addClass("overlay-activ");
                     body.classList.add("body-active");
+                    overlay.find(".overlay__name")[0].innerHTML = "Заказ принят!";
                 }
             });
         }
