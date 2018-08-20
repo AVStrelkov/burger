@@ -197,8 +197,17 @@ function init(){
 
             console.log(data);
             const xhr = new XMLHttpRequest();
-            xhr.open("POST", "https://webdev-api.loftschool.com/sendmai");
+            xhr.responseType = "json";
+            xhr.open("POST", "https://webdev-api.loftschool.com/sendmail");
             xhr.send(JSON.stringify(data));
+            xhr.addEventListener('load', () => {
+                if(xhr.status >= 400) {
+                    console.log("все плохо");
+                }
+                else{
+                    console.log("Все хорошо");
+                }
+            });
         }
     });
 
