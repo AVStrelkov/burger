@@ -205,7 +205,9 @@ function init(){
                     console.log("все плохо");
                 }
                 else{
-                    console.log("Все хорошо");
+                    let overlay = $(".overlay");
+                    overlay.addClass("overlay-activ");
+                    body.classList.add("body-active");
                 }
             });
         }
