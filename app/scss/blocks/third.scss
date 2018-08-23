@@ -15,7 +15,7 @@
 .wrapper-sleder{
     display: flex;
     align-items: center;
-    transition: all 0.5s;
+    transition: all 1.4s;
     position: absolute;
     // width: 9999px;
     overflow: hidden;
@@ -25,7 +25,7 @@
 }
 
 .slide{
-    float: left;
+    // float: left;
     max-width: rem(980px);
     display: flex;
     @include tablets{
@@ -133,10 +133,14 @@
 }
 
 .slide__ingredients-close{
+    display: none;
     position: absolute;
     right: rem(15px);
     top: rem(5px);
-    color: #e35028
+    color: #e35028;
+    @include tablets{
+        display: block;
+    }
 }
 
 .slide__ingredients-row{

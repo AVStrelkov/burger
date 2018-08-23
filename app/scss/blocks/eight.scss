@@ -1,3 +1,29 @@
 .eight-section{
-    background-image: url("../img/eight-bg.jpg");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-map{
+    width: 100%;
+    flex: 1;
+}
+
+.map{
+    height: 100%;
+    width: 100%;
+}
+
+.map__balloon{
+    display: flex;
+    align-items: center;
+    font-size: rem(16px);
+    @include font(u-light);
+}
+
+.map__balloon-pic{
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
 }

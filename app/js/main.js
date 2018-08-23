@@ -26,7 +26,7 @@ function init(){
         const $this = $(e.target);
         const link = $this.closest(".accordeon__link");
         const people = $this.closest(".accordeon__full-name").next(".accordeon__people");
-        console.log(people);
+        // console.log(people);
         
         const peoples = $(".accordeon__people");
         const links = $(".accordeon__link");
@@ -111,7 +111,7 @@ function init(){
             let right = wrapper.style.right/computed;
         } else{
             wrapper.style.right = wrapperRight - computed +"px";
-            console.log(wrapper.style.right);
+            // console.log(wrapper.style.right);
         }
     });
     btnRight.addEventListener("click", function(e){
@@ -125,7 +125,7 @@ function init(){
             let right = wrapper.style.right/computed;
         } else{
             wrapper.style.right = wrapperRight + computed +"px";
-            console.log(wrapper.style.right);
+            // console.log(wrapper.style.right);
         }
     });
 
@@ -143,8 +143,8 @@ function init(){
     let right = Math.round(wrapperRight/computed);
     wrapper.style.right=right*computed+"px";
     // wrapper.style.right = computed * right;
-    console.log(right);
-    console.log(computed);
+    // console.log(right);
+    // console.log(computed);
     });
 
     //reviews
@@ -195,10 +195,10 @@ function init(){
                 to: 'qwer@qwer.com'
             };
 
-            console.log(data);
+            // console.log(data);
             const xhr = new XMLHttpRequest();
             xhr.responseType = "json";
-            xhr.open("POST", "https://webdev-api.loftschool.com/sendmail/fail");
+            xhr.open("POST", "https://webdev-api.loftschool.com/sendmail");
             xhr.send(JSON.stringify(data));
             xhr.addEventListener('load', () => {
                 if(xhr.status >= 400) {
@@ -241,8 +241,68 @@ function init(){
         return field.checkValidity();
     }
 
-    
+    //ymap
+
+    ymaps.ready(maps);
+
+    var placemark =[
+        {
+            latitude: 59.97,
+            langitude: 30.31,
+            hintContent: '<div class="map__hint">ул. Литералов, д. 19</div>',
+            balloonContent: [
+                '<div class="map__balloon">',
+                '<img class="map__balloon-pic" src="svg/icons/logo.svg" alt="Бургер"/>',
+                'Самые вкусные бургеры у нас! Заходите по адресу: ул. Литералов, д. 19',
+                '</div>'
+            ]
+        },
+        {
+            latitude: 59.94,
+            langitude: 30.25,
+            hintContent: '<div class="map__hint">Малый проспект В О, д. 64</div>',
+            balloonContent: [
+                '<div class="map__balloon">',
+                '<img class="map__balloon-pic" src="svg/icons/logo.svg" alt="Бургер"/>',
+                'Самые вкусные бургеры у нас! Заходите по адресу: Малый проспект В О, д. 64',
+                '</div>'
+            ]
+        },
+        {
+            latitude: 59.93,
+            langitude: 30.34,
+            hintContent: '<div class="map__hint">наб. реки Фонтанки, д. 56</div>',
+            balloonContent: [
+                '<div class="map__balloon">',
+                '<img class="map__balloon-pic" src="svg/icons/logo.svg" alt="Бургер"/>',
+                'Самые вкусные бургеры у нас! Заходите по адресу: наб. реки Фонтанки, д. 56',
+                '</div>'
+            ]
+        }
+    ];
+    function maps (){
+        var map = new ymaps.Map('map',{
+            center: [59.94, 30.32],
+            zoom:12,
+            controls:['zoomControl'],
+            behaviors: ['drag']
+        });
+        placemark.forEach(function(obj){
+            var placemark = new ymaps.Placemark([obj.latitude, obj.langitude],{
+                hintContent: obj.hintContent,
+                balloonContent: obj.balloonContent.join('')
+            },{
+                iconLayout: 'default#image',
+                iconImageHref: 'svg/icons/map-marker.svg',
+                iconImageSize: [47,57],
+                iconImageOffset:[-23,-57]
+            });
+            map.geoObjects.add(placemark);
+        });
+    }
 }
+
+
 
 
 //     var nav = document.querySelectorAll(".navigation__link");

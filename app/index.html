@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Бургер</title>
     <link rel="stylesheet" href="css/main.css">
-    <script src="libs/modernizr.js"></script>
+    <!-- <script src="libs/modernizr.js"></script> -->
 </head>
 <body>
     <div class="wrapper">
@@ -80,6 +80,7 @@
                     <li class="navigation__item"><a href="#fourth" class="navigation__link"></a></li>
                     <li class="navigation__item"><a href="#fifth" class="navigation__link"></a></li>
                     <li class="navigation__item"><a href="#sixth" class="navigation__link"></a></li>
+                    <li class="navigation__item"><a href="#ninth" class="navigation__link"></a></li>
                     <li class="navigation__item"><a href="#seventh" class="navigation__link"></a></li>
                     <li class="navigation__item"><a href="#eight" class="navigation__link"></a></li>
                 </ul>
@@ -402,7 +403,7 @@
                     <div class="accordeon">
                         <div class="title">команда</div>
                         <ul class="accordeon__list">
-                            <li class="accordeon__link">
+                            <li class="accordeon__link is-activTeam">
                                 <div class="accordeon__full-name">
                                     <div class="accordeon__arrow">
 
@@ -411,7 +412,7 @@
                                         Ричард Джеймс
                                     </div>
                                 </div>
-                                <ul class="accordeon__people">
+                                <ul class="accordeon__people"  style="display: block">
                                     <li class="accordeon__human">
                                         <div class="accordeon__photo">
                                             <img class="accordeon__photo-pic" src="./img/team/aphex.jpg" alt="" class="accordeon__avatar">
@@ -518,24 +519,30 @@
                             <div class="menu__title" style="background: url(img/accordeon-bg1.jpg) 100% 100% no-repeat; background-size: cover;">
                                 <div class="menu__span">Для мясоедов</div>    
                             </div>
-                            <div class="menu__text">
-                                Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+                            <div class="menu__text-wrap">
+                                <div class="menu__text">
+                                    Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову, однако механизм сочленений неустойчив. Модальность высказывания, как справедливо считает И.Гальперин, пространственно выбирает метр. Речевой акт редуцирует диалектический характер. Развивая эту тему, заимствование редуцирует конструктивный механизм сочленений. Лирический субъект начинает диссонансный анжамбеман. Наш современник стал особенно чутко относиться к слову.
+                                </div>
                             </div>
                         </li>
                         <li class="menu__list">
                             <div class="menu__title" style="background: url(img/accordeon-bg2.jpg) 100% 100% no-repeat; background-size: cover;">
                                 <div class="menu__span">Вегетарианское</div>
                             </div>
-                            <div class="menu__text">
-                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta, assumenda iusto nesciunt minus quia est unde illum tempore amet accusantium eos corporis eum nemo. Illo consequatur adipisci tenetur maxime tempora.
+                            <div class="menu__text-wrap">
+                                <div class="menu__text">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta, assumenda iusto nesciunt minus quia est unde illum tempore amet accusantium eos corporis eum nemo. Illo consequatur adipisci tenetur maxime tempora.
+                                </div>
                             </div>
                         </li>
                         <li class="menu__list">
                             <div class="menu__title" style="background: url(img/accordeon-bg3.jpg) 100% 100% no-repeat; background-size: cover;">
                                 <div class="menu__span">Диетическое</div>
                             </div>
-                            <div class="menu__text">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, cupiditate. Reprehenderit officia dolorem, illum corrupti est doloribus amet saepe culpa ad facilis earum eum nam, veniam cupiditate porro minima aliquid!
+                            <div class="menu__text-wrap">
+                                <div class="menu__text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, cupiditate. Reprehenderit officia dolorem, illum corrupti est doloribus amet saepe culpa ad facilis earum eum nam, veniam cupiditate porro minima aliquid!
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -674,6 +681,13 @@
                 </li>
             </ul>
         </div>
+        <div class="section ninth-section" id="ninth">
+            <div class="content">
+                <div class="title">
+                    Как мы работаем
+                </div>
+            </div>
+        </div>
         <div class="section seventh-section" id="seventh">
             <div class="content">
                 <div class="title">
@@ -772,8 +786,8 @@
             </div>
         </div>
         <div class="section eight-section" id="eight">
-            <div class="content">
-
+            <div class="content-map">
+                <div id="map" class="map"></div>
             </div>
             <footer class="footer">
                 <div class="content">
@@ -873,5 +887,7 @@
     </div>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript">
+    </script>
 </body>
 </html>
