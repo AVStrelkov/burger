@@ -300,7 +300,95 @@ function init(){
             map.geoObjects.add(placemark);
         });
     }
+    //OPS
+
+    let OnePagesScroll = function () {
+        const sections = $(".section");
+        const visible = $("#wrap-section");
+        let inscroll = false;
+
+        let preformTransition = function(sectionEq){
+            let position = sectionEq * -100 +'%';
+
+            if(!inscroll){
+                inscroll = true;
+                let position = sectionEq * -100 + '%';
+
+                sections
+                    .eq(sectionEq)
+                    .addClass("is-active")
+                    .siblings()
+                    .removeClass("is-active");
+
+                setTimeout(function(){
+                    inscroll = false;
+                    $(".navigation__item")
+                        .eq(sectionEq)
+                        .addClass("navigation__active")
+                        .siblings()
+                        .removeClass("navigation__active");
+                },1000);
+                visible.css({
+                    transform: `translateY(${position})`,
+                    "-webkit-transform": `translateY(${position})`
+                });
+            }
+            
+            
+        }
+
+        document.querySelector(".dropdown__link").addEventListener('click', function(e){
+            e.preventDefault();
+            preformTransition(1);
+        });
+        $("[data-scroll-to]").on('click', e =>{
+            e.preventDefault();
+            preformTransition(parseInt($(e.target).data("scroll-to")));
+        });
+
+        let defineSection = function(section){
+            let activeSection = section.filter(".is-active");
+            console.log(activeSection.next());
+            // console.log(activeSection.prev());
+            return{
+                activeSection: activeSection,
+                nextSection: activeSection.next(),
+                prevSection: activeSection.prev()
+            };
+            
+        }
+
+        let scrollToSection = function(direction){
+            let section = defineSection(sections);
+            if (direction === "up" && section.nextSection.length){
+                preformTransition(section.nextSection.index());
+            }
+
+            if (direction === "down" && section.prevSection.length){
+                preformTransition(section.prevSection.index());
+            }
+        }
+
+        $(".wrapper").on({
+            wheel: function(e) {
+                const deltaY = e.originalEvent.deltaY;
+                const direction = deltaY > 0 ? "up" : "down";
+                // console.log(direction);
+                scrollToSection(direction);
+            },
+            touchmove: e => e.preventDefault()
+        });
+    } 
+    OnePagesScroll();
+    
+
+    
+    
+
 }
+
+
+
 
 
 

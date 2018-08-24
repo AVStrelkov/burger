@@ -1,6 +1,7 @@
 .first-section{
     padding-top: rem(10px);
     background-image: url("../img/first-bg.jpg");
+    box-sizing: border-box;
 }
 
 .burger{
@@ -137,7 +138,11 @@
 }
 
 .navigation__active{
-    &:before{
-        opacity: 1;
+    .navigation__link{
+        &:before{
+            opacity: 1;
+        }
     }
+    
 }
+
