@@ -1,0 +1,118 @@
+.ninth-section{
+    background-image: url("../img/ninth-bg.jpg");
+    
+    .title{
+        color: #000000;
+        text-align: center;
+    }
+}
+
+.video__container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.video__player {
+    position: relative;
+    max-width: rem(660px);
+    @include phones{
+        max-width: rem(616px);
+    }
+}
+
+.video__player-img {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+.video__player-img--active{
+    opacity:0;
+}
+
+#player {
+    min-width: rem(660px);
+    max-width: rem(660px);
+    min-height: rem(370px);
+    max-height: rem(370px);
+}
+
+.video__toolbar {
+    width: rem(660px);
+    height: rem(35px);
+    background-color: #3e3e3e;
+    margin-top: rem(-11px);
+    display: flex;
+    z-index: 100;
+    @include phones{
+        width: rem(616px);
+    }
+}
+
+.duration {
+    display: flex;
+    align-items: center;
+}
+
+.duration__img {
+    padding: rem(5px) rem(20px);
+    cursor: pointer;
+}
+
+.duration__length {
+    width: rem(444px);
+    height: rem(4px);
+    border-radius: 1px;
+    background-color: #626262;
+    -webkit-appearance: none;
+    appearance: none;   
+    outline: none;
+    @include phones{
+        width: rem(392px);
+    }
+}
+
+.duration__length--other{
+    width: rem(58px);
+    height: rem(4px);
+}
+
+.duration__length::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    background: #626262;    
+    cursor: pointer;
+    width: rem(13px);
+    height: rem(13px);
+    border-radius: 50%;    
+}
+
+.duration__circle {
+    cursor: pointer;
+    margin-top: rem(-4px);
+    display: block;
+}
+
+.duration__circle--high {
+    right: 0;
+    position: absolute;
+}
+
+.sound {
+    display: flex;
+    align-items: center;
+    padding-left: rem(30px);
+}
+
+.sound__mic {
+    cursor: pointer;
+}
+
+.sound__volume {
+    margin-left: rem(30px);   
+    margin-top: rem(-5px); 
+}

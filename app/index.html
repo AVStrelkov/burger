@@ -675,6 +675,26 @@
                     <div class="title">
                         Как мы работаем
                     </div>
+                    <div class="video__container">
+                        <div class="video__player">
+                            <video id="player" poster="./img/player/cover.png">
+                                <source src="src/video.mp4" type="video/mp4">
+                            </video>
+                            <img src="img/player/Play_white.png" alt="" class="play video__player-img">
+                        </div>
+                        <div class="video__toolbar">
+                            <div class="duration">
+                                <img src="img/player/Play_gray.png" alt="" class="play duration__img">
+                                <input type="range" class="duration__length" id="durationLevel">
+                            </div>
+                            <div class="sound">
+                                <img src="img/player/Volum_gray.png" class="sound__mic" id="mic" alt="">
+                                <div class="sound__volume">
+                                    <input type="range" class="duration__length duration__length--other" id="micLevel">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="section seventh-section" id="seventh">
