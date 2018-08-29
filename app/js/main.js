@@ -348,8 +348,6 @@ function init(){
 
         let defineSection = function(section){
             let activeSection = section.filter(".is-active");
-            console.log(activeSection.next());
-            // console.log(activeSection.prev());
             return{
                 activeSection: activeSection,
                 nextSection: activeSection.next(),
@@ -378,6 +376,38 @@ function init(){
             },
             touchmove: e => e.preventDefault()
         });
+
+        //keydown
+
+        $(document).on('keydown', e => {
+
+            console.log(e.keyCode);
+            switch(e.keyCode) {
+                case 40: //up
+                    scrollToSection('up')
+                    break;
+        
+                case 38: //down
+                    scrollToSection('down')
+                    break;
+            }
+        
+        });
+
+        // mobile
+
+        if(isItMobile) {
+            $(window).swipe( {
+                swipe:function(
+                    event,
+                    direction
+                ) {
+                    scrollToSection(direction);
+                }
+            });
+        }
+        
+    
     } 
     OnePagesScroll();
 }
